@@ -1,7 +1,16 @@
 {
   "compilerOptions": {
     "strict": true,
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "sourceMap": true,
     "jsx": "react-jsx",
     "jsxImportSource": "hono/jsx",
+    "rootDir": "src",
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["*"]
+    }
   }
 }
