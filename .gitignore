@@ -1,6 +1,2 @@
+.DS_Store
 node_modules
-
-# prisma
-prisma/migrations
-prisma/dev.db
-.env
