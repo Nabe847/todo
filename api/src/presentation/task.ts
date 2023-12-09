@@ -1,9 +1,9 @@
-import { createTask } from '@/usecase/task/createTask';
-import { getTasks } from '@/usecase/task/getTasks';
+import { createTask } from '../usecase/task/createTask';
+import { getTasks } from '../usecase/task/getTasks';
 import { Hono } from 'hono';
 import { zValidator } from '@hono/zod-validator';
 import z from 'zod';
-import { getTask } from '@/usecase/task/getTask';
+import { getTask } from '../usecase/task/getTask';
 
 export const task = new Hono();
 

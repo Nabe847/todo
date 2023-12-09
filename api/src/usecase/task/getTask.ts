@@ -1,5 +1,5 @@
-import { Task } from '@/domain/task/entities';
-import TaskRepository from '@/infra/taskRepository';
+import { Task } from '../../domain/task/entities';
+import TaskRepository from '../../infra/taskRepository';
 import { HTTPException } from 'hono/http-exception';
 
 export const getTask = async (id: string): Promise<Task> => {

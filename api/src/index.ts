@@ -1,6 +1,6 @@
 import { serve } from '@hono/node-server';
 import { Hono } from 'hono';
-import { task } from '@/presentation/task';
+import { task } from './presentation/task';
 import { prisma } from './infra/prisma';
 
 const app = new Hono({ strict: false }).basePath('/api');

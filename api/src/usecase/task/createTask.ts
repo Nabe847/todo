@@ -1,5 +1,5 @@
-import { Task } from '@/domain/task/entities';
-import TaskRepository from '@/infra/taskRepository';
+import { Task } from '../../domain/task/entities';
+import TaskRepository from '../../infra/taskRepository';
 
 export const createTask = async (
   title: string,

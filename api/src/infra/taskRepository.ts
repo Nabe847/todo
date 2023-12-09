@@ -1,5 +1,5 @@
-import { Task } from '@/domain/task/entities';
-import { prisma } from '@/infra/prisma';
+import { Task } from '../domain/task/entities';
+import { prisma } from './prisma';
 
 const TaskRepository = {
   async findAll(): Promise<Task[]> {
