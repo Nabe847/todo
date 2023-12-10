@@ -6,8 +6,8 @@
 
 ### Projects
 
-- `api` – Node.js アプリ. [RPC クライアントを公開します](https://hono.dev/guides/rpc)
-- `app` – Next．js アプリ. RPC クライアントを使って `api` を呼び出します
+- `api` - Node.js アプリ. [RPC クライアントを公開します](https://hono.dev/guides/rpc)
+- `app` - Next．js アプリ. RPC クライアントを使って `api` を呼び出します
 
 ### Tech Stack
 
