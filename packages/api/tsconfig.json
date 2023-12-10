@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "target": "ES2022",
+    "module": "ES2022",
+    // NodeNext だと型定義ファイルを生成するときに client.ts の型定義ファイルを生成できない
+    "moduleResolution": "node",
+    // "module": "NodeNext",
+    // "moduleResolution": "NodeNext",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "hono/jsx",
+    "rootDir": "src",
+    "outDir": "build",
+    "declaration": true,
+    "declarationDir": "build/types"
+  }
+}

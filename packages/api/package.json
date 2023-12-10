@@ -1,0 +1,39 @@
+{
+  "name": "api",
+  "main": "./src/client.ts",
+  "version": "1.0.0",
+  "type": "module",
+  "types": "./build/types/client.d.ts",
+  "exports": {
+    ".": {
+      "require": "./build/client.cjs",
+      "import": "./build/client.esm.js"
+    }
+  },
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "run-p build:*",
+    "build:server": "esbuild ./src/index.ts --platform=node --bundle --outfile=./build/index.js",
+    "build:client-cjs": "esbuild ./src/client.ts --bundle --format=cjs --platform=node --outfile=./build/client.cjs",
+    "build:client-esm": "esbuild ./src/client.ts --bundle --format=esm --platform=node --outfile=./build/client.esm.js",
+    "build:types": "tsc --emitDeclarationOnly",
+    "prisma:migrate": "npx prisma migrate dev --name init",
+    "type": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.3.1",
+    "@hono/zod-validator": "^0.1.11",
+    "@prisma/client": "5.7.0",
+    "hono": "^3.11.4",
+    "prisma": "^5.7.0",
+    "uuid": "^9.0.1",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.4",
+    "@types/uuid": "^9.0.7",
+    "esbuild": "^0.19.8",
+    "tsx": "^3.12.2",
+    "typescript": "^5.3.3"
+  }
+}
