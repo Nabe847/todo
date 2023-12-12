@@ -1,4 +1,4 @@
 import { hc } from 'hono/client';
 import { AppType } from './app';
 
-export const client = hc<AppType>('http://localhost:3000/');
+export const client = hc<AppType>('http://localhost:5000/');

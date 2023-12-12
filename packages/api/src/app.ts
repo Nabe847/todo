@@ -1,11 +1,20 @@
-import { Hono } from 'hono';
-import { getTasks } from './usecase/task/getTasks';
 import { zValidator } from '@hono/zod-validator';
+import { Hono } from 'hono';
+import { cors } from 'hono/cors';
 import z from 'zod';
 import { createTask } from './usecase/task/createTask';
 import { getTask } from './usecase/task/getTask';
+import { getTasks } from './usecase/task/getTasks';
 
 export const app = new Hono({ strict: false }).basePath('/api');
+app.use(
+  '*',
+  cors({
+    origin: '*',
+    allowHeaders: ['*'],
+    allowMethods: ['*'],
+  }),
+);
 
 const route = app
   .get('/task', async (c) => {
